@@ -689,6 +689,9 @@ a{
   }
 }
 /* start site-control  */
+.site-control > div {
+  gap: 5px;
+}
 .site-control textarea{
   min-height: 150px;
   border: 1px solid #ccc;
@@ -700,6 +703,7 @@ a{
 }
 .general-info .email-div input[type="email"] {
   flex: 1;
+  min-width: 120px;
 }
 .general-info .email-div a{
   transition: .3s;
@@ -726,9 +730,9 @@ a{
   color: white;
 }
  /* start social-info widget  */
- .social-info i{
-  transition: .3s;
- }
+.social-info i{
+  transition: .3s; 
+}
 .social-info .twitter input:focus + i{
 color: #1da1f2;
 }
@@ -832,11 +836,21 @@ color: #004182;
   padding-top: 15px;
   border-top: 1px solid #ccc;
 }
-.backup-manager .servers > div,
 .backup-manager .servers > div{
   transition: .3s;
+  min-width: 50px;
+  padding: 15px 2px;
 }
-
+@media (max-width: 767px) {
+  .backup-manager .servers > div label{
+    font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  .backup-manager .servers > div label{
+    font-size: 10px;
+  }
+}
 .backup-manager .servers input[type="radio"]:checked + div{
   border-color: var(--blue-color);
 }
